@@ -710,17 +710,19 @@ section {
 }
 
 .pretty-page .ea-includes li {
+.pretty-page .ea-includes li {
     display: grid;
     grid-template-columns: 48px 1fr; /* icon column then text to match services list */
-    gap: 0.5rem; /* tighten gap to align closer to icon */
+    gap: 0.35rem; /* even tighter gap */
     align-items: center; /* vertically center icon and text */
-    padding: 0.4rem 0; /* match services-summary padding */
+    padding: 0.25rem 0; /* smaller vertical padding */
     color: var(--text-dark);
 }
 
 .pretty-page .ea-includes li span {
     display: inline-block;
     line-height: 1.4;
+    margin-left: 0; /* ensure no left margin */
 }
 
 .pretty-page .ea-li-icon {
