@@ -88,56 +88,14 @@ body {
 }
 
 /* Brand text and logo layout */
-.brand-link {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.brand-text {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.06em;
-    color: #111827; /* near-black for professional feel */
-    text-transform: none;
-}
-
 .brand-link .logo-image {
     height: 44px;
     filter: drop-shadow(0 1px 0 rgba(0,0,0,0.04));
 }
 
 /* Make the logo container relative so overlay can sit on top */
-.logo-wrap {
-    position: relative;
-    display: inline-block;
-}
-
-.brand-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    background: rgba(255,255,255,0.85);
-    padding: 2px 8px;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.brand-overlay .brand-text {
-    color: #111827;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-}
-
-/* Ensure overlay scales on small screens */
+/* Ensure logo scales on small screens */
 @media (max-width: 600px) {
-    .brand-overlay .brand-text {
-        font-size: 0.85rem;
-    }
     .brand-link .logo-image {
         height: 36px;
     }
