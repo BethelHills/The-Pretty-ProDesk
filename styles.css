@@ -464,22 +464,23 @@ section {
 }
 
 .pretty-page .services-summary li {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 44px 1fr; /* fixed icon column + flexible text */
     gap: 0.75rem;
+    align-items: center;
     padding: 0.5rem 0;
 }
 
 .pretty-page .services-summary .service-icon {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #ec4899, #a855f7);
     color: white;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
 .pretty-page .services-summary li span {
@@ -490,6 +491,10 @@ section {
 @media (max-width: 768px) {
     .pretty-page .services-summary ul {
         grid-template-columns: 1fr;
+    }
+
+    .pretty-page .services-summary li {
+        grid-template-columns: 36px 1fr;
     }
 }
 
