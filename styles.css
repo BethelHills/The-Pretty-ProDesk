@@ -691,6 +691,13 @@ section {
     font-size: 1rem;
 }
 
+/* Ensure EA paragraphs visually show a small three-space indent. We allow HTML NBSPs but also provide a CSS fallback. */
+.pretty-page .ea-details p,
+.pretty-page .ea-intro {
+    text-indent: 1.5ch; /* approximate three spaces */
+    padding-left: 0.2ch; /* small left padding to preserve layout */
+}
+
 .pretty-page .ea-includes li {
     display: flex;
     gap: 0.75rem;
