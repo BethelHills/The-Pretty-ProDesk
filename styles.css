@@ -440,15 +440,7 @@ section {
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
-    .pretty-page .service-card.ea-card h4 {
-        text-align: center;
-        margin-top: 1.25rem;
-        margin-bottom: 0.75rem;
-    }
     letter-spacing: 1px;
-    .pretty-page .ea-includes {
-        margin-top: 0.75rem; /* add breathing room between heading and list */
-    }
     margin-bottom: 1rem;
 }
 
@@ -666,11 +658,13 @@ section {
     text-align: center;
     margin-top: 1.5rem;
     margin-bottom: 1.25rem; /* larger paragraph gap */
+}
+
 .pretty-page .service-card.ea-card .ea-details {
     margin-top: 0.5rem;
     color: var(--text-dark);
     margin-top: 1.25rem; /* larger breathing room to create paragraph spacing */
-
+}
 /* Keep the EA card's main title and short tagline centered */
 .pretty-page .service-card.ea-card .service-title,
 .pretty-page .service-card.ea-card .service-description {
@@ -716,9 +710,10 @@ section {
 }
 
 .pretty-page .ea-includes li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 48px 1fr; /* icon column then text to match services list */
     gap: 0.75rem;
-    align-items: flex-start;
+    align-items: start;
     padding: 0.4rem 0;
     color: var(--text-dark);
 }
@@ -739,23 +734,19 @@ section {
 }
 
 @media (min-width: 768px) {
-    .pretty-page .ea-includes li {
-        display: grid;
-        grid-template-columns: 48px 1fr; /* icon column then text to align with services list */
-        gap: 0.75rem;
-        align-items: start;
-        padding: 0.6rem 0; /* slightly more vertical spacing */
-        color: var(--text-dark);
+    .pretty-page .ea-includes ul {
+        grid-template-columns: 1fr 1fr; /* ensure two columns on medium+ screens */
     }
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, #ec4899, #a855f7);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
+    .pretty-page .ea-includes li {
+        padding: 0.6rem 0; /* slightly more vertical spacing */
+    }
+}
+
+@media (max-width: 767px) {
+    .pretty-page .ea-includes ul {
+        grid-template-columns: 1fr; /* single column on small screens */
+        gap: 0.6rem;
+    }
 }
 
 .service-title {
