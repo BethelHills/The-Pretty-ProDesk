@@ -663,13 +663,13 @@ section {
 
 /* Left-align content inside Executive Assistant card only */
 .pretty-page .service-card.ea-card {
-    text-align: left;
-}
-
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem; /* larger paragraph gap */
 .pretty-page .service-card.ea-card .ea-details {
     margin-top: 0.5rem;
     color: var(--text-dark);
-}
+    margin-top: 1.25rem; /* larger breathing room to create paragraph spacing */
 
 /* Keep the EA card's main title and short tagline centered */
 .pretty-page .service-card.ea-card .service-title,
