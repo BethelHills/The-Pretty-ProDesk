@@ -146,6 +146,21 @@ body {
     opacity: 1 !important;
 }
 
+/* Stronger fallback rules for Pretty ProDesk about image to ensure visibility and proper fit */
+.pretty-page .about-image img,
+.pretty-page .about-image .about-photo,
+.pretty-page .image-wrapper img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 16px !important;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
