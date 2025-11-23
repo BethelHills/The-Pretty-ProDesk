@@ -101,6 +101,19 @@ body {
     }
 }
 
+/* Pretty ProDesk page typographic adjustments */
+.pretty-page .hero-title .name,
+.pretty-page .section-title,
+.pretty-page .service-title {
+    font-family: 'Libre Baskerville', 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.pretty-page .hero-title .name {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
