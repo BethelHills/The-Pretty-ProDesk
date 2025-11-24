@@ -203,6 +203,34 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
+// Brand Story Modal
+const brandStoryBtn = document.getElementById('view-brand-story');
+const brandStoryModal = document.getElementById('brand-story-modal');
+const brandStoryClose = document.getElementById('brand-story-close');
+const brandStoryBackdrop = document.getElementById('brand-story-backdrop');
+
+if (brandStoryBtn && brandStoryModal) {
+    const openModal = () => {
+        brandStoryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        brandStoryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    brandStoryBtn.addEventListener('click', openModal);
+    brandStoryClose.addEventListener('click', closeModal);
+    brandStoryBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && brandStoryModal.getAttribute('aria-hidden') === 'false') {
+            closeModal();
+        }
+    });
+}
+
 // Active Navigation Link Highlighting
 const sections = document.querySelectorAll('section[id]');
 
