@@ -1395,6 +1395,17 @@ section {
     cursor: pointer;
 }
 
+.modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .hero-content {
