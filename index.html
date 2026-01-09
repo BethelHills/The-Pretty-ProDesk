@@ -481,14 +481,12 @@
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
-                                <a href="#" class="portfolio-link" aria-label="View project">
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="portfolio-link" id="view-data-gallery" aria-label="View data gallery">
+                                    <i class="fas fa-images"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="image-placeholder-portfolio">
-                            <i class="fas fa-folder-open"></i>
-                        </div>
+                        <img src="assets/images/Data1.png" alt="Data Entry & Research" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
                         <h3 class="portfolio-title">Data Entry & Research</h3>
@@ -501,6 +499,7 @@
                             <span class="tag">Research</span>
                             <span class="tag">Data Analysis</span>
                         </div>
+                        <a href="#" class="btn btn-primary" id="view-data-btn" style="margin-top: 1rem; display: inline-block;">View Gallery</a>
                     </div>
                 </div>
             </div>
@@ -767,6 +766,26 @@
                 </div>
                 <div class="gallery-image">
                     <img src="assets/images/travel4.jpg" alt="Travel Planning & Itinerary 4" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Gallery Modal -->
+    <div id="data-gallery-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="data-gallery-backdrop"></div>
+        <div class="modal-content gallery-modal" role="dialog" aria-modal="true" aria-labelledby="data-gallery-title">
+            <button class="modal-close" id="data-gallery-close" aria-label="Close">&times;</button>
+            <h2 id="data-gallery-title">Data Entry & Research Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-image">
+                    <img src="assets/images/Data1.png" alt="Data Entry & Research 1" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/Data2.png" alt="Data Entry & Research 2" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/Data3.png" alt="Data Entry & Research 3" class="gallery-img">
                 </div>
             </div>
         </div>
