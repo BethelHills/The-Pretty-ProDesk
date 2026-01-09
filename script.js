@@ -405,5 +405,52 @@ if (schedulingGalleryModal) {
     });
 }
 
+// Asana Gallery Modal
+const asanaGalleryBtn = document.getElementById('view-asana-gallery');
+const asanaGalleryBtn2 = document.getElementById('view-asana-btn');
+const asanaGalleryModal = document.getElementById('asana-gallery-modal');
+const asanaGalleryClose = document.getElementById('asana-gallery-close');
+const asanaGalleryBackdrop = document.getElementById('asana-gallery-backdrop');
+
+if (asanaGalleryModal) {
+    const openAsanaGallery = () => {
+        asanaGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeAsanaGallery = () => {
+        asanaGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (asanaGalleryBtn) {
+        asanaGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openAsanaGallery();
+        });
+    }
+
+    if (asanaGalleryBtn2) {
+        asanaGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openAsanaGallery();
+        });
+    }
+
+    if (asanaGalleryClose) {
+        asanaGalleryClose.addEventListener('click', closeAsanaGallery);
+    }
+
+    if (asanaGalleryBackdrop) {
+        asanaGalleryBackdrop.addEventListener('click', closeAsanaGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && asanaGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeAsanaGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
