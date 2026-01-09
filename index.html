@@ -400,14 +400,12 @@
                     <div class="portfolio-image">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
-                                <a href="#" class="portfolio-link" aria-label="View project">
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="portfolio-link" id="view-scheduling-gallery" aria-label="View scheduling gallery">
+                                    <i class="fas fa-images"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="image-placeholder-portfolio">
-                            <i class="fas fa-folder-open"></i>
-                        </div>
+                        <img src="assets/images/scheduling1.png" alt="Scheduling Management" class="portfolio-img">
                     </div>
                     <div class="portfolio-content">
                         <h3 class="portfolio-title">Scheduling Management</h3>
@@ -420,6 +418,7 @@
                             <span class="tag">Calendar Management</span>
                             <span class="tag">Time Management</span>
                         </div>
+                        <a href="#" class="btn btn-primary" id="view-scheduling-btn" style="margin-top: 1rem; display: inline-block;">View Gallery</a>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -673,6 +672,29 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scheduling Gallery Modal -->
+    <div id="scheduling-gallery-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="scheduling-gallery-backdrop"></div>
+        <div class="modal-content gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+            <button class="modal-close" id="scheduling-gallery-close" aria-label="Close">&times;</button>
+            <h2 id="gallery-title">Scheduling Management Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-image">
+                    <img src="assets/images/scheduling1.png" alt="Scheduling Management 1" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/scheduling2.png" alt="Scheduling Management 2" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/scheduling3.png" alt="Scheduling Management 3" class="gallery-img">
+                </div>
+                <div class="gallery-image">
+                    <img src="assets/images/scheduling4.png" alt="Scheduling Management 4" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

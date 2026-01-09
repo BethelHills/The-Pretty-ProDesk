@@ -358,5 +358,52 @@ const createScrollToTop = () => {
 
 createScrollToTop();
 
+// Scheduling Gallery Modal
+const schedulingGalleryBtn = document.getElementById('view-scheduling-gallery');
+const schedulingGalleryBtn2 = document.getElementById('view-scheduling-btn');
+const schedulingGalleryModal = document.getElementById('scheduling-gallery-modal');
+const schedulingGalleryClose = document.getElementById('scheduling-gallery-close');
+const schedulingGalleryBackdrop = document.getElementById('scheduling-gallery-backdrop');
+
+if (schedulingGalleryModal) {
+    const openGallery = () => {
+        schedulingGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeGallery = () => {
+        schedulingGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (schedulingGalleryBtn) {
+        schedulingGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openGallery();
+        });
+    }
+
+    if (schedulingGalleryBtn2) {
+        schedulingGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openGallery();
+        });
+    }
+
+    if (schedulingGalleryClose) {
+        schedulingGalleryClose.addEventListener('click', closeGallery);
+    }
+
+    if (schedulingGalleryBackdrop) {
+        schedulingGalleryBackdrop.addEventListener('click', closeGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && schedulingGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
