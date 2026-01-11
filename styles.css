@@ -1321,22 +1321,24 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
     transition: var(--transition);
 }
 
 .footer-logos .logo-item:hover {
-    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
 }
 
 .footer-logos .footer-logo {
-    max-width: 60px;
-    max-height: 40px;
+    max-width: 80px;
+    max-height: 50px;
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    display: block;
 }
 
 .footer-bottom {
