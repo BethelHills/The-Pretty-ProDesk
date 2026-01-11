@@ -1305,6 +1305,40 @@ section {
     transform: translateY(-3px);
 }
 
+.footer-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logos .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.footer-logos .logo-item:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.footer-logos .footer-logo {
+    max-width: 60px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
