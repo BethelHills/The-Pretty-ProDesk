@@ -640,5 +640,52 @@ if (dashboardGalleryModal) {
     });
 }
 
+// CRM Gallery Modal
+const crmGalleryBtn = document.getElementById('view-crm-gallery');
+const crmGalleryBtn2 = document.getElementById('view-crm-btn');
+const crmGalleryModal = document.getElementById('crm-gallery-modal');
+const crmGalleryClose = document.getElementById('crm-gallery-close');
+const crmGalleryBackdrop = document.getElementById('crm-gallery-backdrop');
+
+if (crmGalleryModal) {
+    const openCrmGallery = () => {
+        crmGalleryModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeCrmGallery = () => {
+        crmGalleryModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    if (crmGalleryBtn) {
+        crmGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCrmGallery();
+        });
+    }
+
+    if (crmGalleryBtn2) {
+        crmGalleryBtn2.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCrmGallery();
+        });
+    }
+
+    if (crmGalleryClose) {
+        crmGalleryClose.addEventListener('click', closeCrmGallery);
+    }
+
+    if (crmGalleryBackdrop) {
+        crmGalleryBackdrop.addEventListener('click', closeCrmGallery);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && crmGalleryModal.getAttribute('aria-hidden') === 'false') {
+            closeCrmGallery();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
