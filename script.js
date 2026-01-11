@@ -186,7 +186,7 @@ if (testimonialCards.length > 0) {
 
 // Contact Form Handling with EmailJS
 // SETUP REQUIRED: 
-// 1. Sign up at https://www.emailjs.com/
+// 1. Sign up at https://www.emailjs.com/ (free account)
 // 2. Create an email service (Gmail recommended)
 // 3. Create an email template with these variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 // 4. In the template, set TO field to: helenudeh.va@gmail.com
@@ -207,6 +207,12 @@ if (contactForm) {
         const subject = document.getElementById('subject') ? document.getElementById('subject').value : '';
         const message = document.getElementById('message') ? document.getElementById('message').value : '';
 
+        // Get submit button and disable it during submission
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
         // EmailJS template parameters
         const templateParams = {
             from_name: name,
@@ -221,14 +227,30 @@ if (contactForm) {
         emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert('Thank you for your message! I will get back to you soon.');
+                // Show success message
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.backgroundColor = '#10b981';
+                
+                // Show alert
+                alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
+                
+                // Reset form
                 contactForm.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    submitButton.style.backgroundColor = '';
+                }, 3000);
             }, function(error) {
                 console.log('FAILED...', error);
-                // Fallback to mailto link if EmailJS fails or is not configured
-                const mailtoLink = `mailto:helenudeh.va@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                window.location.href = mailtoLink;
-                alert('Opening your email client...');
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                
+                // Show error message
+                alert('Sorry, there was an error sending your message. Please email me directly at helenudeh.va@gmail.com or try again later.');
             });
     });
 }
