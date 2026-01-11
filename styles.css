@@ -1450,7 +1450,9 @@ section {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
     text-align: center;
-    font-style: normal;
+    font-style: italic;
+    display: block;
+    width: 100%;
 }
 
 /* Brand Story modal logo styling */
