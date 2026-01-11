@@ -1460,6 +1460,11 @@ section {
     padding: 0 5%;
 }
 
+#brand-story-modal .modal-content p:not(.brand-story-tagline) {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
 /* Brand Story modal logo styling */
 .brand-story-logo {
     display: block;
