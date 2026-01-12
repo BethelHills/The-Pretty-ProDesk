@@ -596,6 +596,9 @@
             <div class="section-header">
                 <span class="section-tag">Client Feedback</span>
                 <h2 class="section-title">What Clients Are Saying</h2>
+                <button class="btn btn-primary review-btn" id="leave-review-btn" style="margin-top: 1.5rem;">
+                    Leave a Review
+                </button>
             </div>
             <div class="testimonials-slider">
                 <div class="testimonial-card active">
@@ -751,6 +754,34 @@
             </div>
         </div>
     </section>
+
+    <!-- Review Form Modal -->
+    <div id="review-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="review-modal-backdrop"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="review-form-title">
+            <button class="modal-close" id="review-modal-close" aria-label="Close">&times;</button>
+            <h2 id="review-form-title">Leave a Review</h2>
+            <form id="review-form" class="contact-form">
+                <div class="form-group">
+                    <label for="reviewer-name">Your Name *</label>
+                    <input type="text" id="reviewer-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-role">Your Role</label>
+                    <input type="text" id="reviewer-role" name="role" placeholder="e.g., CEO, Operations Manager">
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-company">Company</label>
+                    <input type="text" id="reviewer-company" name="company" placeholder="e.g., Tech Startup">
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review *</label>
+                    <textarea id="review-text" name="review" rows="5" required placeholder="Share your experience with The Pretty ProDesk..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

@@ -744,5 +744,61 @@ if (crmGalleryModal) {
     });
 }
 
+// Review Form Modal
+const reviewModal = document.getElementById('review-modal');
+const leaveReviewBtn = document.getElementById('leave-review-btn');
+const reviewModalClose = document.getElementById('review-modal-close');
+const reviewModalBackdrop = document.getElementById('review-modal-backdrop');
+const reviewForm = document.getElementById('review-form');
+
+if (reviewModal && leaveReviewBtn) {
+    const openReviewModal = () => {
+        reviewModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeReviewModal = () => {
+        reviewModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        reviewForm.reset();
+    };
+
+    leaveReviewBtn.addEventListener('click', openReviewModal);
+    
+    if (reviewModalClose) {
+        reviewModalClose.addEventListener('click', closeReviewModal);
+    }
+    
+    if (reviewModalBackdrop) {
+        reviewModalBackdrop.addEventListener('click', closeReviewModal);
+    }
+
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('reviewer-name').value,
+                role: document.getElementById('reviewer-role').value,
+                company: document.getElementById('reviewer-company').value,
+                review: document.getElementById('review-text').value
+            };
+
+            // Here you can add code to send the review to your backend/email service
+            // For now, we'll just show an alert and close the modal
+            alert('Thank you for your review! We appreciate your feedback.');
+            closeReviewModal();
+        });
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && reviewModal.getAttribute('aria-hidden') === 'false') {
+            closeReviewModal();
+        }
+    });
+}
+
 console.log('Portfolio website loaded successfully!');
 
