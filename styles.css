@@ -73,13 +73,16 @@ body {
 }
 
 .logo-image {
-    height: 50px;
+    height: clamp(50px, 6vw, 70px);
     width: auto;
-    max-width: 200px;
+    max-width: 280px;
     object-fit: contain;
     transition: var(--transition);
     filter: brightness(0.9) contrast(1.2);
     -webkit-filter: brightness(0.9) contrast(1.2);
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .logo a:hover .logo-image {
@@ -89,15 +92,34 @@ body {
 
 /* Brand text and logo layout */
 .brand-link .logo-image {
-    height: 44px;
+    height: clamp(50px, 6vw, 70px);
+    max-width: 280px;
     filter: drop-shadow(0 1px 0 rgba(0,0,0,0.04));
 }
 
 /* Make the logo container relative so overlay can sit on top */
 /* Ensure logo scales on small screens */
+@media (max-width: 768px) {
+    .brand-link .logo-image,
+    .logo-image {
+        height: clamp(45px, 8vw, 60px);
+        max-width: 240px;
+    }
+}
+
 @media (max-width: 600px) {
-    .brand-link .logo-image {
-        height: 36px;
+    .brand-link .logo-image,
+    .logo-image {
+        height: clamp(40px, 10vw, 55px);
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-link .logo-image,
+    .logo-image {
+        height: clamp(35px, 12vw, 50px);
+        max-width: 180px;
     }
 }
 
