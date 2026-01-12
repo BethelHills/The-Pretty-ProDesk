@@ -185,13 +185,21 @@ if (testimonialCards.length > 0) {
 }
 
 // Contact Form Handling with EmailJS
-// SETUP REQUIRED: 
-// 1. Sign up at https://www.emailjs.com/ (free account)
-// 2. Create an email service (Gmail recommended)
-// 3. Create an email template with these variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
-// 4. In the template, set TO field to: helenudeh.va@gmail.com
-// 5. Get your Public Key, Service ID, and Template ID from EmailJS dashboard
-// 6. Replace the placeholders below with your actual values
+// EMAILJS TEMPLATE SETUP INSTRUCTIONS:
+// 1. Go to your EmailJS dashboard: https://dashboard.emailjs.com/
+// 2. Navigate to Email Templates
+// 3. Edit your template (template_6hdit42)
+// 4. Set TO field to: helenudeh.va@gmail.com
+// 5. Set Reply-To field to: {{from_email}}
+// 6. Set Message Body to:
+//    Name: {{from_name}}
+//    Email: {{from_email}}
+//    
+//    Subject: {{subject}}
+//    
+//    Message:
+//    {{message}}
+// 7. Make sure all variables are properly formatted in the template
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
