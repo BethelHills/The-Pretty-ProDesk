@@ -513,6 +513,8 @@ section {
     color: white;
     border-radius: 10px;
     font-size: 1rem;
+    flex: 0 0 48px;
+    min-height: 48px;
 }
 
 .pretty-page .services-summary li span {
@@ -535,6 +537,14 @@ section {
         grid-template-columns: 36px 1fr;
         gap: 1rem; /* increased gap between icon and text on mobile */
         padding: 0.6rem 0; /* increased vertical padding for better spacing */
+    }
+
+    .pretty-page .services-summary .service-icon {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+        min-height: 36px;
+        font-size: 0.95rem;
     }
 }
 
