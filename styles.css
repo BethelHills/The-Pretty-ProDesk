@@ -1334,6 +1334,14 @@ section {
     color: rgba(0, 0, 0, 0.7);
 }
 
+.footer-brand .logo-image {
+    height: clamp(70px, 10vw, 110px);
+    max-width: 420px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.04));
+}
+
 .footer-links {
     display: flex;
     flex-direction: column;
