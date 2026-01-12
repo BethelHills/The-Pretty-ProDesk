@@ -86,7 +86,12 @@ const animateCounter = (element) => {
             element.textContent = Math.floor(current);
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target;
+            // Check if this is the Projects Completed stat (target 120)
+            if (target === 120) {
+                element.textContent = '120+';
+            } else {
+                element.textContent = target;
+            }
         }
     };
 
