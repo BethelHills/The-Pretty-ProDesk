@@ -73,9 +73,9 @@ body {
 }
 
 .logo-image {
-    height: clamp(50px, 6vw, 70px);
+    height: clamp(60px, 8vw, 90px);
     width: auto;
-    max-width: 280px;
+    max-width: 350px;
     object-fit: contain;
     transition: var(--transition);
     filter: brightness(0.9) contrast(1.2);
@@ -92,8 +92,8 @@ body {
 
 /* Brand text and logo layout */
 .brand-link .logo-image {
-    height: clamp(50px, 6vw, 70px);
-    max-width: 280px;
+    height: clamp(60px, 8vw, 90px);
+    max-width: 350px;
     filter: drop-shadow(0 1px 0 rgba(0,0,0,0.04));
 }
 
@@ -102,24 +102,24 @@ body {
 @media (max-width: 768px) {
     .brand-link .logo-image,
     .logo-image {
-        height: clamp(45px, 8vw, 60px);
-        max-width: 240px;
+        height: clamp(55px, 10vw, 75px);
+        max-width: 300px;
     }
 }
 
 @media (max-width: 600px) {
     .brand-link .logo-image,
     .logo-image {
-        height: clamp(40px, 10vw, 55px);
-        max-width: 200px;
+        height: clamp(50px, 12vw, 70px);
+        max-width: 260px;
     }
 }
 
 @media (max-width: 480px) {
     .brand-link .logo-image,
     .logo-image {
-        height: clamp(35px, 12vw, 50px);
-        max-width: 180px;
+        height: clamp(45px, 14vw, 65px);
+        max-width: 240px;
     }
 }
 
