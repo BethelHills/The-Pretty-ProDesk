@@ -621,9 +621,9 @@ section {
 .about-photo {
     width: 100%;
     max-width: 400px;
-    height: 500px;
+    height: auto;
     border-radius: 20px;
-    object-fit: cover;
+    object-fit: contain;
     box-shadow: var(--shadow-xl);
     transition: var(--transition);
 }
