@@ -1387,7 +1387,6 @@ section {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ec4899, #a855f7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1396,9 +1395,31 @@ section {
     transition: var(--transition);
 }
 
+/* Social media brand colors */
+.contact-social .social-linkedin {
+    background: #0077b5;
+}
+
+.contact-social .social-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.contact-social .social-twitter {
+    background: #1DA1F2;
+}
+
+.contact-social .social-facebook {
+    background: #1877F2;
+}
+
+.contact-social .social-email {
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+}
+
 .contact-social a:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
+    opacity: 0.9;
 }
 
 .contact-form {
@@ -1518,19 +1539,39 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-dark);
+    color: white;
     text-decoration: none;
     transition: var(--transition);
 }
 
-.footer-social a:hover {
+/* Social media brand colors for footer */
+.footer-social .social-linkedin {
+    background: #0077b5;
+}
+
+.footer-social .social-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.footer-social .social-twitter {
+    background: #1DA1F2;
+}
+
+.footer-social .social-facebook {
+    background: #1877F2;
+}
+
+.footer-social .social-email {
     background: linear-gradient(135deg, #ec4899, #a855f7);
-    color: white;
+}
+
+.footer-social a:hover {
     transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    opacity: 0.9;
 }
 
 .footer-logos {
