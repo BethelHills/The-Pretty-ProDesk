@@ -1884,6 +1884,16 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero-background {
+        background-position: center top;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(236, 72, 153, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2.5rem;
