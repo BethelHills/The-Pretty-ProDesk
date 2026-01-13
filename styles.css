@@ -1476,10 +1476,13 @@ section {
     gap: 0.5rem;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links span {
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
     transition: var(--transition);
+    cursor: default;
+    pointer-events: none;
 }
 
 .footer-links a:hover {
