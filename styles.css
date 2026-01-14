@@ -367,6 +367,10 @@ body {
     overflow: hidden;
 }
 
+.service-packages-page .services {
+    padding-top: clamp(140px, 16vh, 170px);
+}
+
 .hero-background {
     position: absolute;
     top: 0;
