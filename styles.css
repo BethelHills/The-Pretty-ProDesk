@@ -368,7 +368,7 @@ body {
 }
 
 .service-packages-page .services {
-    padding-top: clamp(140px, 16vh, 170px);
+    padding-top: clamp(170px, 20vh, 210px);
 }
 
 .hero-background {
