@@ -2114,3 +2114,17 @@ section {
     }
 }
 
+@media (max-width: 768px) {
+    .pretty-page .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .pretty-page .about-image {
+        order: -1;
+    }
+
+    .pretty-page .about-text {
+        order: 1;
+    }
+}
+
